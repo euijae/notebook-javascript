@@ -10,7 +10,7 @@
  * @param {number[][]} accounts
  * @return {number}
  */
-var maximumWealth = function(accounts) {
+module.exports = function(accounts) {
     const eachWealth = accounts.map(account => {
         return account.reduce((acc, item) => acc + item, 0);
     });

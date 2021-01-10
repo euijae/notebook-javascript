@@ -6,7 +6,7 @@
  *    Input: s = "aiohn", indices = [3,1,4,2,0]
  *    Output: "nihao"
  */
-var restoreString = function(s, indices) {
+module.exports = function(s, indices) {
     let result = [];
 
     indices.forEach((value, index) => {
@@ -15,5 +15,3 @@ var restoreString = function(s, indices) {
 
     return result.join("");
 };
-
-console.log(restoreString("aiohn", [3,1,4,2,0]));
