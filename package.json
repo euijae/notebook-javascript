@@ -1,0 +1,22 @@
+{
+  "name": "notebook-javascript",
+  "version": "1.0.0",
+  "description": "learning JavaScript",
+  "scripts": {
+    "test": "./node_modules/.bin/cucumber-js features -r steps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/euijae/notebook-javascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/euijae/notebook-javascript/issues"
+  },
+  "homepage": "https://github.com/euijae/notebook-javascript#readme",
+  "devDependencies": {
+    "@cucumber/cucumber": "^7.0.0",
+    "assert": "^2.0.0"
+  }
+}
