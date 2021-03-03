@@ -10,25 +10,14 @@
  * Explanation: There is only one item matching the given rule, which is ["computer","silver","lenovo"].
  */
 var countMatches = function(items, ruleKey, ruleValue) {
-    let res = [];
     
-    items.forEach(item => {
+    return items.reduce((acc, item) => {
         const [type, color, name] = item;
+        const isFound = ((ruleKey === 'type' && ruleValue === type) ||
+            (ruleKey === 'color' && ruleValue === color) ||
+            (ruleKey === 'name' && ruleValue === name));
         
-        if(ruleKey === 'type') {
-            if(ruleValue === type) {
-                res.push(item);
-            }
-        } else if(ruleKey === 'color') {
-            if(ruleValue === color) {
-                res.push(item);
-            }
-        } else if(ruleKey === 'name') {
-            if(ruleValue === name) {
-                res.push(item);
-            }
-        }
-    });
-    
-    return res.length;
+        return acc + (isFound ? 1 : 0);
+    }, 0);
+
 };
